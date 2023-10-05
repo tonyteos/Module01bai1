@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Form: là biểu mẫu để thu thập dữ liệu gửi lên server
+        I.các thẻ hay dùng trong form
+        1.thẻ <label>: nhãn dán cho ô input
+        2. ô input   : để tạo ô cho người dùng điền dữ liệU
+        3.button     : tạo nút bấm để gửi thông tin lên server
+        II- các thuộc tính hay dùng trong form
+        1. for của label trùng với thuộc tính id của thẻ input thì
+        khi nhấn vào label tự động trỏ vào ô input.
+        2.action :  địa chỉ nơi nhận dữ liệu
+        3.method :phương thức dùng để gửi dữ liệU với form
+        4.id  : thuộc tính duy nhất dùng để định danh cho thẻ
+        5.name: thuộc tính dùng để gửi dữ liệu lên server
+        6. autocomplete 
+        7.enctype : định dạng mã hoá dữ liệu lên server
+        III: thẻ input có các  thuộc tính 
+        1.type:
+         + text : kiểu chữ và số
+         + number: chỉ cho phép nhập dạng số
+         + password: kí tự nó sẽ ẩn  đi
+         + radion : hiện ô bấn chọn ,nếu muốn chọn 1 trong nhiều ô thì các ô
+         phải trùng thuộc tính name.
+         +checkbox : hiển thị ô chọn 
+         + range : tạo 1 thanh tiến trình 
+         + date : hiển thị  thời gian
+         + month: hiển thị tháng
+         --------
+        2.value : giá trị của ô input
+        3.placeholder : gợi ý nhập kí tự cho ô input  
+     -->
+     <form action="" method="get" enctype="multipart/form-data" id="login">
+        <label for="username">username</label>
+        <input class="username" type="text" id="username" name="username" autocomplete="off"> <br>
+        <label for="">password</label>
+        <input class="username" type="text" name="password" autocomplete="off" autofocus required> <br>
+        <input type="text" value="5" disabled> <br>
+
+        <input type="radio" checked name="test" > Nam
+        <input type="radio" name="test" > Nữ
+        <input type="radio" name="test" > giới tính khác.
+        <input type="month">
+        <select name="" id="">
+            <option value="">hà nội</option>
+            <option value="">hải phòng</option>
+            <option value="" selected>hcm</option>
+        </select>
+        <button >login</button> <br>
+        <input type="text" size="5" placeholder="mời nhập email"> 
+        <input type="button" value="click">
+        <input type="reset" value="reset">
+        <input type="file" multiple>
+        <input type="color">
+        <textarea name="" id="" cols="12" rows="5"></textarea><br>
+        <input type="text" placeholder="mời chọn giá" list="select1">
+        <datalist id="select1">
+            <option value="giá 1"></option>
+            <option value="giá 2"></option>
+            <option value="giá 3"></option>
+        </datalist>
+        <input type="number" min="5" max="20">
+     </form>
+
+     <input name="test-form" type="text" form="login">
+</body>
+</html>
